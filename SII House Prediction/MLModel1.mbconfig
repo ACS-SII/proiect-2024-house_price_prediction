@@ -1,0 +1,470 @@
+﻿{
+  "Scenario": "Regression",
+  "DataSource": {
+    "Version": 3,
+    "EscapeCharacter": "\"",
+    "ReadMultiLines": false,
+    "KeepDiacritics": false,
+    "KeepPunctuations": false,
+    "AllowQuoting": false,
+    "Type": "TabularFile",
+    "FilePath": "C:\\Users\\tedi_\\Desktop\\housing.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "longitude",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "latitude",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "housing_median_age",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "total_rooms",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "total_bedrooms",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "population",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "households",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "median_income",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "median_house_value",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "ocean_proximity",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.836957435997998,
+        "RuntimeInSeconds": 17.267,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "ocean_proximity"
+            ],
+            "InputColumnNames": [
+              "ocean_proximity"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "longitude",
+              "latitude",
+              "housing_median_age",
+              "total_rooms",
+              "total_bedrooms",
+              "population",
+              "households",
+              "median_income"
+            ],
+            "InputColumnNames": [
+              "longitude",
+              "latitude",
+              "housing_median_age",
+              "total_rooms",
+              "total_bedrooms",
+              "population",
+              "households",
+              "median_income"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "ocean_proximity",
+              "longitude",
+              "latitude",
+              "housing_median_age",
+              "total_rooms",
+              "total_bedrooms",
+              "population",
+              "households",
+              "median_income"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 462,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.078874348171924888,
+            "NumberOfTrees": 842,
+            "SubsampleFraction": 0.5466219150063929,
+            "MaximumBinCountPerFeature": 153,
+            "FeatureFraction": 0.9838180988710904,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 0.60619237578445806,
+            "LabelColumnName": "median_house_value",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.8142819360661655,
+        "RuntimeInSeconds": 0.757,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "ocean_proximity"
+            ],
+            "InputColumnNames": [
+              "ocean_proximity"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "longitude",
+              "latitude",
+              "housing_median_age",
+              "total_rooms",
+              "total_bedrooms",
+              "population",
+              "households",
+              "median_income"
+            ],
+            "InputColumnNames": [
+              "longitude",
+              "latitude",
+              "housing_median_age",
+              "total_rooms",
+              "total_bedrooms",
+              "population",
+              "households",
+              "median_income"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "ocean_proximity",
+              "longitude",
+              "latitude",
+              "housing_median_age",
+              "total_rooms",
+              "total_bedrooms",
+              "population",
+              "households",
+              "median_income"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.24823007796223273,
+            "NumberOfTrees": 210,
+            "SubsampleFraction": 0.50998561482171911,
+            "MaximumBinCountPerFeature": 226,
+            "FeatureFraction": 0.99999999,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 0.99999977667298645,
+            "LabelColumnName": "median_house_value",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.81218718211432439,
+        "RuntimeInSeconds": 109.004,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "ocean_proximity"
+            ],
+            "InputColumnNames": [
+              "ocean_proximity"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "longitude",
+              "latitude",
+              "housing_median_age",
+              "total_rooms",
+              "total_bedrooms",
+              "population",
+              "households",
+              "median_income"
+            ],
+            "InputColumnNames": [
+              "longitude",
+              "latitude",
+              "housing_median_age",
+              "total_rooms",
+              "total_bedrooms",
+              "population",
+              "households",
+              "median_income"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "ocean_proximity",
+              "longitude",
+              "latitude",
+              "housing_median_age",
+              "total_rooms",
+              "total_bedrooms",
+              "population",
+              "households",
+              "median_income"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 2604,
+            "MinimumExampleCountPerLeaf": 26,
+            "LearningRate": 0.40689938616327093,
+            "NumberOfTrees": 3992,
+            "SubsampleFraction": 0.99999977667298645,
+            "MaximumBinCountPerFeature": 175,
+            "FeatureFraction": 0.99300244678121952,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 0.99999977667298645,
+            "LabelColumnName": "median_house_value",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.79497921260337945,
+        "RuntimeInSeconds": 0.621,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "ocean_proximity"
+            ],
+            "InputColumnNames": [
+              "ocean_proximity"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "longitude",
+              "latitude",
+              "housing_median_age",
+              "total_rooms",
+              "total_bedrooms",
+              "population",
+              "households",
+              "median_income"
+            ],
+            "InputColumnNames": [
+              "longitude",
+              "latitude",
+              "housing_median_age",
+              "total_rooms",
+              "total_bedrooms",
+              "population",
+              "households",
+              "median_income"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "ocean_proximity",
+              "longitude",
+              "latitude",
+              "housing_median_age",
+              "total_rooms",
+              "total_bedrooms",
+              "population",
+              "households",
+              "median_income"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 800,
+            "MinimumExampleCountPerLeaf": 24,
+            "LearningRate": 0.44421654094154805,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 0.51022796485244448,
+            "MaximumBinCountPerFeature": 263,
+            "FeatureFraction": 0.99590990234397747,
+            "L1Regularization": 2.0256469962167186E-10,
+            "L2Regularization": 0.54037454088527614,
+            "LabelColumnName": "median_house_value",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.79249065523147177,
+        "RuntimeInSeconds": 0.499,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "ocean_proximity"
+            ],
+            "InputColumnNames": [
+              "ocean_proximity"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "longitude",
+              "latitude",
+              "housing_median_age",
+              "total_rooms",
+              "total_bedrooms",
+              "population",
+              "households",
+              "median_income"
+            ],
+            "InputColumnNames": [
+              "longitude",
+              "latitude",
+              "housing_median_age",
+              "total_rooms",
+              "total_bedrooms",
+              "population",
+              "households",
+              "median_income"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "ocean_proximity",
+              "longitude",
+              "latitude",
+              "housing_median_age",
+              "total_rooms",
+              "total_bedrooms",
+              "population",
+              "households",
+              "median_income"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 28,
+            "LearningRate": 0.99999977667298645,
+            "NumberOfTrees": 61,
+            "SubsampleFraction": 0.475415606651584,
+            "MaximumBinCountPerFeature": 171,
+            "FeatureFraction": 0.94093705287647045,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 0.99999977667298645,
+            "LabelColumnName": "median_house_value",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "OneHotEncoding",
+      "e1": "ReplaceMissingValues",
+      "e2": "Concatenate",
+      "e3": "FastTreeRegression",
+      "e4": "FastForestRegression",
+      "e5": "LightGbmRegression",
+      "e6": "LbfgsPoissonRegressionRegression",
+      "e7": "SdcaRegression"
+    },
+    "Schema": "e0 * e1 * e2 * (e3 + e4 + e5 + e6 + e7)",
+    "MetricName": "RSquared",
+    "ModelFilePath": "C:\\Users\\tedi_\\source\\repos\\SII House Prediction\\SII House Prediction\\MLModel1.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 5,
+  "TrainingOption": {
+    "Version": 2,
+    "Subsampling": false,
+    "Type": "RegressionTrainingOption",
+    "TrainingTime": 200,
+    "LabelColumn": "median_house_value",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "TrainValidateSplitValidationOption",
+      "SplitRatio": 0.2
+    }
+  }
+}
